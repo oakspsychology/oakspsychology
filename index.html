@@ -1,121 +1,281 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Oaks Psychology PLLC</title>
+<title>Oaks Psychology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5f8fa;
-  color: #2d3a3a;
+  background: #fbf8f2;
+  color: #0b376b;
 }
 
-header {
-  background-color: #5d86a6;
-  color: white;
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 20px;
+  background: #fbf8f2;
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+nav a {
+  color: #0b376b;
+  text-decoration: none;
+}
+
+.hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 30px 20px 80px;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,.88), rgba(255,255,255,.35)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center bottom;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 40px;
+.logo {
+  width: 240px;
+  max-width: 80%;
 }
 
-header p {
-  font-size: 20px;
+h1 {
+  font-family: Georgia, serif;
+  font-size: 72px;
+  font-weight: normal;
+  margin: 10px 0;
+  color: #0b376b;
+}
+
+.subtitle {
+  font-size: 25px;
+  letter-spacing: 8px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #0b376b;
+}
+
+.tagline {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  margin-top: 20px;
+  color: #0b376b;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  padding: 20px;
+}
+
+.btn {
+  background: #0b4f8a;
+  color: white;
+  padding: 16px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 section {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 35px 20px;
+  text-align: center;
 }
 
-.button {
-  display: inline-block;
-  background-color: #5d86a6;
-  color: white;
-  padding: 12px 22px;
-  text-decoration: none;
-  border-radius: 6px;
-  margin-top: 15px;
+h2 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: normal;
+  color: #0b376b;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #123;
 }
 
 .services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
 }
 
 .card {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1;
-  min-width: 200px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  padding: 25px 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.12);
+}
+
+.card h3 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  color: #0b376b;
+}
+
+.card p {
+  color: #123;
+  line-height: 1.5;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f5f8;
+  margin: 15px auto;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.info-row h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  margin: 0;
 }
 
 footer {
-  background-color: #e8eef2;
   text-align: center;
-  padding: 25px;
+  padding: 30px;
+  background: #eef3f5;
+  color: #0b376b;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 46px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    letter-spacing: 4px;
+  }
+
+  .tagline {
+    font-size: 22px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .info-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<nav>
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#team">Meet Our Team</a>
+  <a href="#insurance">Insurances</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <img src="oaks-logo.png" alt="Oaks Psychology logo" class="logo">
+
   <h1>Oaks Psychology</h1>
-  <h2>Counseling and Therapy Services</h2>
-  <p>Rooted in care</p>
-  <p>Growing toward healing</p>
-</header>
+  <div class="subtitle">COUNSELING AND THERAPY SERVICES</div>
+  <div class="tagline">Rooted in Care – Growing Toward Healing</div>
+</div>
 
-<section>
-<h2>Welcome</h2>
-<p>
-Supporting children, adolescents, and adults through anxiety,
-life stressors, emotional challenges, and personal growth.
-Offering therapy services in Shelby Township and telehealth
-throughout Michigan.
-</p>
+<div class="buttons">
+  <a href="sms:YOURNUMBER" class="btn">TEXT US</a>
+  <a href="tel:YOURNUMBER" class="btn">CALL US</a>
+  <a href="YOURTHERAPYPORTALLINK" class="btn">THERAPYPORTAL</a>
+</div>
 
-<a class="button" href="mailto:YOUR EMAIL HERE">
-Request Appointment
-</a>
+<section class="intro">
+  <h2>Supporting Growth and Healing</h2>
+  <p>
+    Compassionate outpatient therapy for individuals, couples, and families.
+    We help children, teens, and adults navigate life’s challenges, heal from
+    difficult experiences, and build healthier, more fulfilling lives.
+  </p>
+  <p>
+    In-person in Shelby Township and telehealth throughout Michigan.
+  </p>
 </section>
 
-<section>
-<h2>Services</h2>
+<section id="services">
+  <h2>Our Services</h2>
 
-<div class="services">
+  <div class="services">
+    <div class="card">
+      <h3>Anxiety & Stress</h3>
+      <p>Support for worry, overwhelm, and everyday stress.</p>
+    </div>
 
-<div class="card">
-<h3>Anxiety</h3>
-<p>Support for anxious thoughts and emotional overwhelm.</p>
-</div>
+    <div class="card">
+      <h3>Depression</h3>
+      <p>Compassionate care to help you feel like yourself again.</p>
+    </div>
 
-<div class="card">
-<h3>Children & Teens</h3>
-<p>Therapy tailored to developmental and emotional needs.</p>
-</div>
+    <div class="card">
+      <h3>All Ages</h3>
+      <p>Therapy for children, teens, young adults, and older adults.</p>
+    </div>
 
-<div class="card">
-<h3>Telehealth</h3>
-<p>Convenient virtual therapy across Michigan.</p>
-</div>
+    <div class="card">
+      <h3>Family & Couples Therapy</h3>
+      <p>Strengthen relationships and improve communication.</p>
+    </div>
 
-</div>
+    <div class="card">
+      <h3>Life Transitions</h3>
+      <p>Guidance through change, loss, and life’s challenges.</p>
+    </div>
+  </div>
 </section>
 
-<footer>
-<p>Oaks Psychology PLLC</p>
-<p>6060 Stoney View Dr Ste 200<br>
-Shelby Township, MI 48316-4970</p>
+<section id="team">
+  <div class="info-row">
+    <div>
+      <h3>Meet Our Team</h3>
+      <p>Get to know our compassionate therapists and their areas of expertise.</p>
+    </div>
+    <a href="#" class="btn">MEET OUR TEAM</a>
+  </div>
+</section>
+
+<section id="insurance">
+  <div class="info-row">
+    <div>
+      <h3>Insurances We Accept</h3>
+      <p>View current insurance plans accepted by Oaks Psychology.</p>
+    </div>
+    <a href="#" class="btn">VIEW INSURANCES</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>Oaks Psychology</p>
+  <p>6060 Stoney View Dr Ste 200<br>
+  Shelby Township, MI 48316-4970</p>
 </footer>
 
 </body>

@@ -1,73 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Oaks Psychology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fbfaf7;
-  color: #073b70;
+  background: #fbfaf4;
+  color: #063b73;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 nav {
+  height: 80px;
   display: flex;
   justify-content: center;
-  gap: 40px;
-  padding: 18px;
-  background: #fbfaf7;
-  font-family: Georgia, serif;
-  font-size: 18px;
+  align-items: center;
+  gap: 55px;
+  background: #fbfaf4;
+  font-size: 20px;
 }
 
 nav a {
-  color: #073b70;
+  color: #063b73;
   text-decoration: none;
+}
+
+nav a:first-child {
+  border-bottom: 2px solid #063b73;
+}
+
+.menu {
+  position: absolute;
+  right: 35px;
+  top: 24px;
+  font-size: 38px;
+  line-height: 25px;
 }
 
 .hero {
   text-align: center;
-  padding: 45px 20px 175px;
+  padding: 0 20px 170px;
   background:
     linear-gradient(to bottom,
-      rgba(255,255,255,.98) 0%,
-      rgba(255,255,255,.97) 45%,
-      rgba(255,255,255,.65) 60%,
-      rgba(255,255,255,.15) 100%
-    ),
-    url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80");
+      rgba(251,250,244,.98) 0%,
+      rgba(251,250,244,.9) 45%,
+      rgba(251,250,244,.25) 80%,
+      rgba(251,250,244,0) 100%),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center bottom;
 }
 
 .logo {
-  width: 390px;
-  max-width: 82%;
-  margin-bottom: 5px;
+  width: 350px;
+  max-width: 80%;
+  margin-top: -5px;
 }
 
 h1 {
-  font-family: Georgia, serif;
-  font-size: 76px;
+  font-size: clamp(58px, 9vw, 105px);
   font-weight: normal;
-  margin: 5px 0;
-  color: #073b70;
-}
-
-.subtitle {
-  font-size: 25px;
-  letter-spacing: 8px;
-  font-weight: bold;
-  color: #073b70;
+  margin: -20px 0 10px;
+  letter-spacing: 1px;
 }
 
 .tagline {
-  font-family: Georgia, serif;
-  font-size: 28px;
-  margin-top: 22px;
-  color: #073b70;
+  font-family: Arial, sans-serif;
+  font-size: clamp(18px, 3vw, 33px);
+  letter-spacing: 8px;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+
+.subtitle {
+  font-size: clamp(22px, 3vw, 34px);
+  margin-top: 0;
+}
+
+main {
+  background: #fbfaf4;
+  margin-top: -80px;
+  border-radius: 50% 50% 0 0 / 5% 5% 0 0;
+  padding: 45px 35px 70px;
 }
 
 .buttons {
@@ -75,113 +96,144 @@ h1 {
   justify-content: center;
   gap: 55px;
   flex-wrap: wrap;
-  margin-top: -45px;
-  padding: 20px;
+  margin-bottom: 35px;
 }
 
-.btn {
-  background: #0b4f8a;
+.button {
+  background: #0f4b83;
   color: white;
-  padding: 16px 40px;
   border-radius: 8px;
-  text-decoration: none;
+  padding: 18px 38px;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 2px;
-  display: inline-block;
-}
-
-section {
-  max-width: 1150px;
-  margin: auto;
-  padding: 35px 20px;
+  font-size: 20px;
+  text-decoration: none;
+  min-width: 210px;
   text-align: center;
 }
 
-h2 {
-  font-family: Georgia, serif;
-  font-size: 40px;
-  font-weight: normal;
-  color: #073b70;
-  margin-bottom: 15px;
+.section {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 35px;
 }
 
-.intro p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #123;
+.section h2 {
+  font-size: 40px;
+  font-weight: normal;
+  margin: 20px 0 8px;
+}
+
+.section p {
+  font-family: Arial, sans-serif;
+  color: #12345a;
+  font-size: 19px;
+  line-height: 1.55;
+  margin: 0 auto 18px;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: normal;
+  margin: 35px 0 20px;
 }
 
 .services {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 18px;
+  max-width: 1150px;
+  margin: 0 auto 30px;
 }
 
 .card {
-  background: white;
-  padding: 28px 15px;
+  background: #fffdf8;
   border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0,0,0,.12);
+  padding: 28px 18px;
+  text-align: center;
+  min-height: 220px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.13);
+}
+
+.icon {
+  font-size: 52px;
+  margin-bottom: 14px;
 }
 
 .card h3 {
-  font-family: Georgia, serif;
-  font-size: 22px;
-  color: #073b70;
+  font-size: 23px;
+  margin: 0 0 12px;
+  font-weight: normal;
 }
 
 .card p {
-  color: #123;
-  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 0;
+  color: #12345a;
 }
 
 .info-row {
+  max-width: 1150px;
+  margin: 16px auto;
+  padding: 22px 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #f1f5f8;
-  margin: 15px auto;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: left;
+  justify-content: space-between;
+  background: #f3f7fa;
+  border-radius: 8px;
+}
+
+.info-left {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.circle-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #dfeaf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
 }
 
 .info-row h3 {
-  font-family: Georgia, serif;
   font-size: 30px;
-  margin: 0;
-  color: #073b70;
+  font-weight: normal;
+  margin: 0 0 6px;
 }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #eef3f5;
-  color: #073b70;
+.info-row p {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #12345a;
+  font-size: 17px;
+}
+
+.info-row a {
+  background: #0f4b83;
+  color: white;
+  text-decoration: none;
+  padding: 16px 35px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
 @media (max-width: 900px) {
   nav {
+    gap: 18px;
+    font-size: 16px;
     flex-wrap: wrap;
-    gap: 16px;
-    font-size: 16px;
-  }
-
-  h1 {
-    font-size: 48px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-    letter-spacing: 4px;
-  }
-
-  .tagline {
-    font-size: 22px;
-  }
-
-  .buttons {
-    gap: 15px;
+    height: auto;
+    padding: 18px 45px 18px 15px;
   }
 
   .services {
@@ -190,8 +242,18 @@ footer {
 
   .info-row {
     flex-direction: column;
+    gap: 20px;
     text-align: center;
-    gap: 15px;
+    padding: 25px;
+  }
+
+  .info-left {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .buttons {
+    gap: 18px;
   }
 }
 </style>
@@ -201,94 +263,100 @@ footer {
 
 <nav>
   <a href="#">Home</a>
-  <a href="#services">Services</a>
-  <a href="#team">Meet Our Team</a>
-  <a href="#insurance">Insurances</a>
-  <a href="#contact">Contact</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Meet Our Team</a>
+  <a href="#">Insurances</a>
+  <a href="#">Contact</a>
 </nav>
 
-<div class="hero">
-  <img src="oaks-logo.png" alt="Oaks Psychology logo" class="logo">
+<div class="menu">☰</div>
+
+<section class="hero">
+  <img src="logo.png" class="logo" alt="Oaks Psychology logo">
 
   <h1>Oaks Psychology</h1>
-  <div class="subtitle">COUNSELING AND THERAPY SERVICES</div>
-  <div class="tagline">Rooted in Care – Growing Toward Healing</div>
-</div>
 
-<div class="buttons">
-  <a href="sms:YOURNUMBER" class="btn">TEXT US</a>
-  <a href="tel:YOURNUMBER" class="btn">CALL US</a>
-  <a href="YOURTHERAPYPORTALLINK" class="btn">THERAPYPORTAL</a>
-</div>
+  <div class="tagline">COUNSELING AND THERAPY SERVICES</div>
 
-<section class="intro">
-  <h2>Supporting Growth and Healing</h2>
-  <p>
-    Compassionate outpatient therapy for individuals, couples, and families.
-    We help children, teens, and adults navigate life’s challenges, heal from
-    difficult experiences, and build healthier, more fulfilling lives.
-  </p>
-  <p>
-    In-person in Shelby Township and telehealth throughout Michigan.
-  </p>
+  <p class="subtitle">Rooted in Care – Growing Toward Healing</p>
 </section>
 
-<section id="services">
-  <h2>Our Services</h2>
+<main>
 
-  <div class="services">
+  <div class="buttons">
+    <a class="button" href="sms:">💬 &nbsp; TEXT US</a>
+    <a class="button" href="tel:">📞 &nbsp; CALL US</a>
+    <a class="button" href="#">👤 &nbsp; THERAPYPORTAL</a>
+  </div>
+
+  <section class="section">
+    <h2>Supporting Growth and Healing</h2>
+    <p>
+      Compassionate outpatient therapy for individuals, couples, and families.
+      We help children, teens, and adults navigate life’s challenges, heal from
+      difficult experiences, and build healthier, more fulfilling lives.
+    </p>
+    <p>In-person in Shelby Township and telehealth throughout Michigan.</p>
+  </section>
+
+  <h2 class="services-title">Our Services</h2>
+
+  <section class="services">
     <div class="card">
+      <div class="icon">♡</div>
       <h3>Anxiety & Stress</h3>
       <p>Support for worry, overwhelm, and everyday stress.</p>
     </div>
 
     <div class="card">
+      <div class="icon">🧠</div>
       <h3>Depression</h3>
       <p>Compassionate care to help you feel like yourself again.</p>
     </div>
 
     <div class="card">
+      <div class="icon">👥</div>
       <h3>All Ages</h3>
       <p>Therapy for children, teens, young adults, and older adults.</p>
     </div>
 
     <div class="card">
+      <div class="icon">♡</div>
       <h3>Family & Couples Therapy</h3>
       <p>Strengthen relationships and improve communication.</p>
     </div>
 
     <div class="card">
+      <div class="icon">🌿</div>
       <h3>Life Transitions</h3>
       <p>Guidance through change, loss, and life’s challenges.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="team">
-  <div class="info-row">
-    <div>
-      <h3>Meet Our Team</h3>
-      <p>Get to know our compassionate therapists and their areas of expertise.</p>
+  <section class="info-row">
+    <div class="info-left">
+      <div class="circle-icon">👥</div>
+      <div>
+        <h3>Meet Our Team</h3>
+        <p>Get to know our compassionate therapists and their areas of expertise.</p>
+      </div>
     </div>
-    <a href="#" class="btn">MEET OUR TEAM</a>
-  </div>
-</section>
+    <a href="#">MEET OUR TEAM</a>
+  </section>
 
-<section id="insurance">
-  <div class="info-row">
-    <div>
-      <h3>Insurances We Accept</h3>
-      <p>View current insurance plans accepted by Oaks Psychology.</p>
+  <section class="info-row">
+    <div class="info-left">
+      <div class="circle-icon">🛡️</div>
+      <div>
+        <h3>Insurances We Accept</h3>
+        <p>We accept a variety of insurance plans.</p>
+      </div>
     </div>
-    <a href="#" class="btn">VIEW INSURANCES</a>
-  </div>
-</section>
+    <a href="#">VIEW INSURANCES</a>
+  </section>
 
-<footer id="contact">
-  <p>Oaks Psychology</p>
-  <p>6060 Stoney View Dr Ste 200<br>
-  Shelby Township, MI 48316-4970</p>
-</footer>
+</main>
 
 </body>
 </html>

@@ -54,8 +54,23 @@ nav a:first-child {
 
 .hero {
   text-align: center;
-  background: #fbfaf4;
-  padding: 0;
+  padding: 0 20px 260px;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(251,250,244,1) 0%,
+      rgba(251,250,244,.85) 28%,
+      rgba(251,250,244,.45) 48%,
+      rgba(251,250,244,.12) 68%,
+      rgba(251,250,244,0) 85%
+    ),
+    url("trees-background.jpeg");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.forest-divider {
+  display: none;
 }
 
 .logo {

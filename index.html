@@ -46,52 +46,55 @@ nav a:first-child {
 
 .hero {
   text-align: center;
-  padding: 0 20px 40px;
-  margin-top: -55px;
-  background:
-    linear-gradient(to bottom,
-      rgba(251,250,244,.98) 0%,
-      rgba(251,250,244,.9) 45%,
-      rgba(251,250,244,.25) 80%,
-      rgba(251,250,244,0) 100%),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center bottom;
+  background: #fbfaf4;
+  padding: 10px 20px 20px;
 }
 
 .logo {
-  width: 460px;
-  max-width: 90%;
+  width: 340px;
+  max-width: 80%;
   display: block;
-  margin: -120px auto -180px;
+  margin: 0 auto -10px;
 }
 
 h1 {
-  font-size: clamp(58px, 8vw, 95px);
+  font-size: clamp(65px, 8vw, 105px);
   font-weight: normal;
-  margin: -30px 0 8px;
+  margin: 0;
   line-height: 1;
   letter-spacing: .5px;
 }
 
 .tagline {
   font-family: Arial, sans-serif;
-  font-size: clamp(18px, 3vw, 33px);
-  letter-spacing: 8px;
+  font-size: 26px;
+  letter-spacing: 6px;
   font-weight: bold;
-  margin-bottom: 22px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .subtitle {
-  font-size: clamp(22px, 3vw, 34px);
+  font-size: 26px;
   margin-top: 0;
+  margin-bottom: 25px;
+}
+
+  .forest-divider {
+  height: 260px;
+  background:
+    url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
 main {
   background: #fbfaf4;
-  margin-top: -80px;
-  border-radius: 50% 50% 0 0 / 5% 5% 0 0;
+  margin-top: -70px;
+  border-radius: 50% 50% 0 0 / 8% 8% 0 0;
   padding: 45px 35px 70px;
+  position: relative;
+  z-index: 2;
 }
 
 .buttons {
@@ -276,13 +279,21 @@ main {
 <div class="menu">☰</div>
 
 <section class="hero">
- <img src="oaks-logo.png" class="logo" alt="Oaks Psychology logo">
+
+  <img src="oaks-logo.png" class="logo" alt="Oaks Psychology logo">
 
   <h1>Oaks Psychology</h1>
 
-  <div class="tagline">COUNSELING AND THERAPY SERVICES</div>
+  <div class="tagline">
+    COUNSELING AND THERAPY SERVICES
+  </div>
 
-  <p class="subtitle">Rooted in Care – Growing Toward Healing</p>
+  <p class="subtitle">
+    Rooted in Care – Growing Toward Healing
+  </p>
+
+  <div class="forest-divider"></div>
+
 </section>
 
 <main>

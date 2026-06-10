@@ -11,7 +11,7 @@
   
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -57,10 +57,11 @@ nav a:first-child {
 
 .hero {
   text-align: center;
-  padding: 0px 20px 260px;
-  scroll-margin-top: 0px;
+  padding: 0 20px 0;
+  min-height: calc(100vh - 65px);
+  scroll-margin-top: 65px;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   background:
     linear-gradient(
       to bottom,
@@ -90,10 +91,10 @@ nav a:first-child {
 }
 
 .logo {
-  width: 520px;
-  max-width: 92%;
+  width: 420px;
+  max-width: 90%;
   display: block;
-  margin: -180px auto -220px;
+  margin: -65px auto -135px;
 }
 
 h1 {

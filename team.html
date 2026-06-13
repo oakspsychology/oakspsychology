@@ -63,12 +63,14 @@ nav a:hover {
   padding: 25px;
   text-align: center;
   box-shadow: 0 2px 12px rgba(0,0,0,.12);
+  overflow: hidden;
 }
 
 .team-card img {
   width: 190px;
   height: 190px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
   margin-bottom: 18px;
 }
@@ -87,11 +89,41 @@ nav a:hover {
   margin-bottom: 15px;
 }
 
-.bio {
+.short-bio,
+.full-bio {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.7;
   color: #12345a;
+  text-align: left;
+}
+
+.full-bio {
+  display: none;
+}
+
+.team-card.open .full-bio {
+  display: block;
+}
+
+.team-card.open .short-bio {
+  display: none;
+}
+
+.team-card button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  background: #063b73;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+.team-card button:hover {
+  opacity: .9;
 }
 
 @media (max-width: 900px) {
@@ -132,13 +164,18 @@ nav a:hover {
 <section class="team">
 
   <div class="team-card">
-    <img src="owner-headshot.jpg" alt="Owner headshot">
-    <h2>Julianne Randall</h2>
-    <div class="role">Owner / Therapist</div>
-    <p class="bio">
-      Julianne Randall, LMSW, Owner
+  <img src="julianne-headshot.jpg" alt="Julianne Randall headshot" class="headshot">
 
-      Julianne Randall earned her Master of Social Work from Wayne State University and is the founder and owner of Oaks Psychology. 
+  <h2>Julianne Randall</h2>
+  <h3>Owner / Therapist</h3>
+
+  <p class="short-bio">
+    Julianne Randall, LMSW, is the founder and owner of Oaks Psychology. She strives to create a warm, supportive space where individuals feel comfortable exploring challenges, building resilience, and moving toward lasting healing and growth.
+  </p>
+
+  <div class="full-bio">
+    <p>
+        Julianne Randall earned her Master of Social Work from Wayne State University and is the founder and owner of Oaks Psychology. 
       She is passionate about creating a warm, supportive, and nonjudgmental space where individuals can feel comfortable exploring life's challenges and working toward meaningful change.
       Julianne works with adolescents and adults experiencing anxiety, depression, OCD, trauma, ADHD, life transitions, relationship concerns, and other emotional and behavioral challenges. 
       She believes that therapy should be tailored to each person's unique needs and goals, helping individuals gain insight, build coping skills, and develop greater confidence in themselves and their lives.
@@ -148,27 +185,49 @@ nav a:hover {
     </p>
   </div>
 
+  <button onclick="this.parentElement.classList.toggle('open')">
+    Read More
+  </button>
+</div>
+    
 <div class="team-card">
-    <img src="therapist1.jpg" alt="Therapist headshot">
+    <img src="images/susan.jpg" alt="Susan Sharpe" class="headshot">
+
     <h2>Susan Sharpe</h2>
-    <div class="role">Therapist</div>
-    <p class="bio">
-      Susan Sharpe is a warm and compassionate social worker who believes people do their best healing when they feel truly heard, supported, and not judged.
+    <h3>Therapist</h3>
+
+    <p class="short-bio">
+      Susan Sharpe is a warm and compassionate therapist who helps individuals feel supported, grounded, and confident as they navigate life's challenges.
+    </p>
+
+    <div class="full-bio">
+      <p>
+        Susan Sharpe is a warm and compassionate social worker who believes people do their best healing when they feel truly heard, supported, and not judged.
       She earned her Master of Social Work from Wayne State University and is passionate about helping clients feel more grounded and confident as they move through life’s challenges.
       Susan takes a down-to-earth, client-centered approach that focuses on each person’s strengths and lived experiences. 
       She aims to create a safe, comfortable space where clients can show up exactly as they are and take things at a pace that feels right for them.
       She works with children, adolescents, and adults navigating anxiety, trauma, family stress, and life transitions. 
       Susan integrates Cognitive Behavioral Therapy (CBT) and trauma-informed care in a practical, supportive way to help clients build coping skills that actually fit into everyday life.
       At her core, Susan’s goal is simple: to help people feel more understood, more steady, and more able to trust their own ability to grow and move forward.
-    </p>
-</div>
+      </p>
+    </div>
+
+    <button class="read-more-btn">Read More</button>
+  </div>
 
 <div class="team-card">
-    <img src="therapist2.jpg" alt="Therapist headshot">
+    <img src="images/laura.jpg" alt="Laura Clarkston" class="headshot">
+
     <h2>Laura Clarkston</h2>
-    <div class="role">Therapist</div>
-    <p class="bio">
-      Laura is a Limited Licensed Master Social Worker (LLMSW) who believes therapy should feel genuine, supportive, and tailored to the individual. 
+    <h3>Therapist</h3>
+
+    <p class="short-bio">
+      Laura is an LLMSW who provides genuine, supportive, and individualized care for children, adolescents, adults, and families.
+    </p>
+
+    <div class="full-bio">
+      <p>
+        Laura is a Limited Licensed Master Social Worker (LLMSW) who believes therapy should feel genuine, supportive, and tailored to the individual. 
       She understands that taking the first step toward support can be difficult and strives to create a welcoming environment where clients feel comfortable, respected, and understood.
       Laura works with children, adolescents, young adults, adults, and families navigating challenges such as anxiety, depression, life transitions, relationship concerns, parenting stress, emotional regulation, and self-esteem. 
       Her goal is to help clients build insight, resilience, and practical tools that support meaningful and lasting change.
@@ -179,24 +238,53 @@ nav a:hover {
       As a former educator and parent, Laura understands the challenges of balancing life's many responsibilities, transitions, and expectations.
       Laura considers it a privilege to walk alongside clients through both challenges and growth. 
       Her hope is that each person feels seen, supported, and empowered to move forward with greater confidence and resilience.
-    </p>
-</div>
+    </div>
+
+    <button class="read-more-btn">Read More</button>
+  </div>
 
   <div class="team-card">
-    <img src="billing-headshot.jpg" alt="Billing manager headshot">
-    <h2>Chelsea Rottman</h2>
-    <div class="role">Billing and Operations Manager</div>
-    <p class="bio">
-      Chelsea is the Billing and Operations Manager at Oaks Psychology and helps keep the practice running smoothly behind the scenes. 
+    <img src="images/chelsea.jpg" alt="Chelsea" class="headshot">
+
+    <h2>Chelsea</h2>
+    <h3>Billing Manager</h3>
+
+    <p class="short-bio">
+      Chelsea oversees billing operations and helps support the day-to-day administrative needs of Oaks Psychology.
+    </p>
+
+    <div class="full-bio">
+      <p>
+        Chelsea is the Billing and Operations Manager at Oaks Psychology and helps keep the practice running smoothly behind the scenes. 
       She assists with billing, insurance questions, administrative needs, and many of the day-to-day operations that support both clients and clinicians.
       Chelsea understands that navigating insurance and paperwork can sometimes feel overwhelming. 
       She strives to make the process as straightforward and stress free as possible by providing responsive support and clear communication.
       In addition to overseeing billing and administrative responsibilities, Chelsea works closely with the Oaks Psychology team to coordinate practice operations.
       She is committed to creating a positive experience and helping ensure that clients feel supported from their first interaction with the Oaks Psychology.
-    </p>
+      </p>
+    </div>
+
+    <button class="read-more-btn">Read More</button>
   </div>
 
+</div>
+
 </section>
+
+<script>
+document.querySelectorAll('.read-more-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    const card = this.closest('.team-card');
+
+    card.classList.toggle('open');
+
+    this.textContent =
+      card.classList.contains('open')
+      ? 'Show Less'
+      : 'Read More';
+  });
+});
+</script>
 
 </body>
 </html>
